@@ -1,0 +1,274 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+% for rotated text in columns 
+\usepackage{adjustbox}
+\newcolumntype{R}[2]{%
+    >{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
+    l%
+    <{\egroup}%
+}
+\newcommand*\rot{\multicolumn{1}{R{60}{1em}}}% no optional argument here, please!
+
+% Gray value version
+\newcommand{\low}[0]{\cellcolor{black!25}~}
+\newcommand{\medium}[0]{\cellcolor{black!50}~}
+\newcommand{\high}[0]{\cellcolor{black!75}~}
+\newcommand{\sole}[0]{\cellcolor{black}~}
+\newcommand{\na}[0]{\textcolor{gray}{n.a.}}
+
+
+\usepackage[style=apa]{biblatex}
+\addbibresource{sample.bib}
+
+
+% for colored table
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+
+\begin{document}
+
+
+\section*{Paper Contribution Statement}
+
+\subsection*{Paper Information}
+\fullcite{Le2023_ijcai_benchmmarking-xai-toolkit-survey}
+
+\subsection*{Author Abbreviations}
+% NOTE: best to order this here alphabetically by surname
+\begin{tabular}{llllll}
+Phuong Quynh Le     & PQL &
+Meike Nauta         & MN  &
+Van Bach Nguyen     & VBN \\
+Shreyasi Pathak     & SP  &
+Jörg Schlötterer    & JS  &
+Christin Seifert    & CS \\
+\end{tabular}
+
+
+\subsection*{Author Contributions according to CRediT\footnote{Contributor Roles Taxonomy, \url{https://credit.niso.org}}\footnote{Inspiration for visualzuation taken from \url{https://www.nature.com/nature-index/news-blog/researchers-embracing-visual-tools-contribution-matrix-give-fair-credit-authors-scientific-papers}}}
+
+\begin{tabular}{llllp{4cm}}
+ & AB & CD & DE  & comment \\
+Conceptualization 
+    & \low 
+    & \low 
+    & \medium
+    & everyone was bored\\
+Data Curation
+    & \na
+    & \na
+    & \na\\
+Formal Analysis
+    & \sole
+    & 
+    & \\
+Funding Acquisition
+    & \na
+    & \na
+    & \na\\
+Investigation
+    & \sole
+    & 
+    & \\
+Methodology
+    & 
+    & \medium
+    & \medium\\
+Project Administration
+    & 
+    & \sole
+    & \\
+Resources
+    & \sole
+    & 
+    & \\
+Software 
+    & \sole
+    & 
+    & \\
+Supervision
+    & 
+    & 
+    & \sole\\
+Validation
+    & \sole
+    & 
+    & \\
+Visuazlization
+    & 
+    & \high
+    & \low\\
+Writing - Original Draft
+    & \sole
+    & 
+    & \\
+Writing - Review and Editing
+    & \low
+    & \low
+    & \medium \\
+\end{tabular}
+
+\subsection*{Additional Comments}
+
+\fbox{
+\begin{minipage}{\linewidth}
+  The quick brown fox jumps right over the lazy dog. the quick brown fox 
+  jumps right over the lazy dog. the quick brown fox jumps right over the lazy 
+  dog. 
+\vspace{2cm}
+\end{minipage}
+}
+
+\subsection*{Signatures}
+\noindent\begin{tabular}{ll}
+\makebox[3in]{\hrulefill} & \makebox[3in]{\hrulefill}\\
+\texttt{Phuong Quynh Le / } Place, Date, Signature  
+& \texttt{Meike Nauta/ } Place, Date, Signature  
+\\[5ex]% adds space between the two sets of signatures
+\makebox[3in]{\hrulefill} & \makebox[3in]{\hrulefill}\\
+\texttt{Van Bach Nguyen / } Place, Date, Signature  
+& \texttt{Shreyasi Pathak / } Place, Date, Signature  
+\\[5ex]% adds space between the two sets of signatures
+\makebox[3in]{\hrulefill} & \makebox[3in]{\hrulefill}\\
+\texttt{Jörg Schlötterer / } Place, Date, Signature  
+& \texttt{Christin Seifert/ } Place, Date, Signature  
+\end{tabular}
+
+\clearpage
+
+\subsection*{Appendix: CRedit Contribution Categories}
+Category description from \url{https://credit.niso.org}:
+
+\begin{footnotesize}
+\begin{description}
+\setlength\itemsep{-0.3em}
+\item[Conceptualization] Ideas; formulation or evolution of overarching research goals and aims. 
+\item[Data Curation] Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later reuse. 
+\item[Formal Analysis] Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data. 
+\item[Funding Acquisition] Acquisition of the financial support for the project leading to this publication. 
+\item[Investigation] Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection.
+\item[Methodology] Development or design of methodology; creation of models.
+\item[Project Administration] Management and coordination responsibility for the research activity planning and execution.
+\item[Resources] Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools. 
+\item[Software] Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components.
+\item[Supervision]  Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team. 
+\item[Validation] Verification, whether as a part of the activity or separate, of the overall replication or reproducibility of results/experiments and other research outputs.
+\item[Visuazlization] Preparation, creation and/or presentation of the published work, specifically visualization/data presentation.
+\item[Writing - Original Draft] Creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation).
+\item[Writing - Review and Editing]   Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre- or post-publication stages. 
+\end{description}
+\end{footnotesize}
+
+\clearpage\newpage
+\section*{Contributions}
+
+
+\section*{Paper Information}
+Inspiration from \url{https://www.nature.com/nature-index/news-blog/researchers-embracing-visual-tools-contribution-matrix-give-fair-credit-authors-scientific-papers}
+
+Taxonomy used \url{https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/credit.html}
+
+
+%Note: was thinking of having this matrix transposed - contributions in rows and authors in columns as suggested in https://www.nature.com/nature-index/news-blog/researchers-embracing-visual-tools-contribution-matrix-give-fair-credit-authors-scientific-papers
+% adding columns in latex takes more time to adjust this to different authors, though. And this way we can have an additional comment per authors
+\begin{table}
+\caption{version 1, authors in row, easy to adapt to different numbers of authors}
+\begin{tabular}{llllllllllllllp{4cm}}
+    & \rot{Conceptualization} &  \rot{Data Curation} & \rot{Formal Analysis} & \rot{Funding Acquisition} & \rot{Investigation} & \rot{Methodology} & \rot{Project Administration} & \rot{Resources} & \rot{Software} & \rot{Supervision} & \rot{Validation} & \rot{Writing (Draft)} & \rot{Writing (Review)} & Comment \\
+Author 1 & \low & \na & & & & & & & & \high & \low \low & & & \\
+Author 2 & \low & \na & & & & & & & & \high & \low \low & & & was to lazy to do anything\\
+Author 3 & \low & \na & & \sole & \low & \sole & & & & \high & \low \low & & & \\
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Version 2 - long, with explantion of criterion. hard to adapt to the number of authors, but self-contained}
+\begin{tabular}{p{8cm}lllp{4cm}}
+ & MK & CS & IKS & comment \\
+Conceptualization\newline
+\footnotesize{Ideas; formulation or evolution of overarching research goals and aims.} 
+    & \low 
+    & \low 
+    & \medium
+    & everyone was bored\\
+Data Curation \newline
+\footnotesize{Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later reuse.}
+    & \na
+    & \na
+    & \na\\
+Formal Analysis\newline
+\footnotesize{Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data.}
+    & \
+    & 
+    & \\
+Funding Acquisition\newline
+\footnotesize{Acquisition of the financial support for the project leading to this publication.}
+    & \na
+    & \na
+    & \na\\
+Investigation\newline
+\footnotesize{Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection}
+    & \sole
+    & 
+    & \\
+Methodology\newline
+\footnotesize{Development or design of methodology; creation of models.}
+    & 
+    & \medium
+    & \medium\\
+Project Administration\newline
+\footnotesize{Management and coordination responsibility for the research activity planning and execution.}
+    & 
+    & 
+    & \\
+Resources\newline
+\footnotesize{Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools.}
+    & 
+    & 
+    & \\
+Software \newline
+\footnotesize{Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components.}
+    & 
+    & 
+    & \\
+Supervision \newline
+\footnotesize{Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team.}
+    & 
+    & 
+    & \\
+Validation \newline
+\footnotesize{Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs.}
+    & 
+    & 
+    & \\
+Visuazlization \newline
+\footnotesize{Preparation, creation and/or presentation of the published work, specifically visualization/data presentation.}
+    & 
+    & 
+    & \\
+Writing - Original Draft \newline
+\footnotesize{Creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation).}
+    & 
+    & 
+    & \\
+Writing - Review and Editing \newline
+\footnotesize{Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre- or post-publication stages.}
+    & 
+    & 
+    & \\
+\end{tabular}
+\end{table}
+
+\clearpage\newpage
+
+
+
+\end{document}

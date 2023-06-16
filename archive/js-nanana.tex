@@ -1,0 +1,202 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+% headers and footers and page numbers 
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{array,booktabs}
+\newcommand {\otoprule}{\midrule [\heavyrulewidth]}
+\newcolumntype {+}{ >{\global\let\currentrowstyle\relax}}
+\newcolumntype {^}{ >{\currentrowstyle }}
+ \newcommand {\rowstyle}[1]{\gdef\currentrowstyle{#1} %
+ #1\ignorespaces
+ }
+\newcommand{\tabhead}{\rowstyle{\bfseries}}
+
+\usepackage{tikz}
+
+
+
+
+%V7
+\newcommand*\low{\begin{tikzpicture}
+\draw[fill=white, draw=gray] (0,0) circle (1mm);
+\end{tikzpicture}}
+\newcommand*\medium{\begin{tikzpicture}
+\draw[fill=gray!25, draw=gray] (0,0) circle (1.3mm);
+\end{tikzpicture}}
+\newcommand*\high{\begin{tikzpicture}
+\draw[fill=gray!85, draw=gray!85] (0,0) circle (1.6mm);
+\end{tikzpicture}}
+\newcommand*\sole{\begin{tikzpicture}
+\draw[fill=black, draw=black] (0,0) circle (1.9mm);
+\end{tikzpicture}}
+\newcommand*\none{\begin{tikzpicture}
+\node[] at (0,0) {\textcolor{gray}{x}};
+\end{tikzpicture}}
+\newcommand*\na[1]{\multicolumn{#1}{c}{\textcolor{gray}{\leavevmode\leaders\hrule height 0.7ex depth \dimexpr0.4pt-0.7ex\hfill\kern0pt ~n.a. \leavevmode\leaders\hrule height 0.7ex depth \dimexpr0.4pt-0.7ex\hfill\kern0pt }}}
+
+
+
+\usepackage[style=apa]{biblatex}
+\addbibresource{sample.bib}
+
+
+
+\begin{document}
+
+% page headers and footers
+\lhead{Contribution statement for \cite{Le2023_ijcai_benchmmarking-xai-toolkit-survey}}
+\rhead{\textcolor{gray}{[Document Version 0.1]}}
+
+\cfoot{Page \thepage\ of \pageref*{LastPage}}
+
+
+\section*{Paper Contribution Statement}
+
+\subsection*{Paper Information}
+\fullcite{Le2023_ijcai_benchmmarking-xai-toolkit-survey}
+
+\subsection*{Author Abbreviations}
+% NOTE: best to order this here alphabetically by surname
+\begin{tabular}{llllll}
+Phuong Quynh Le     & \textbf{QL} &
+Meike Nauta         & \textbf{MN}  &
+Van Bach Nguyen     & \textbf{BN} \\
+Shreyasi Pathak     & \textbf{SP}  &
+Jörg Schlötterer    & \textbf{JS}  &
+Christin Seifert    & \textbf{CS}
+\\
+\end{tabular}
+
+
+\subsection*{Author Contributions according to CRediT\footnote{Contributor Roles Taxonomy, \url{https://credit.niso.org}, last accessed June 14th 2023}}%\footnote{Inspiration for visualzuation taken from \url{https://www.nature.com/nature-index/news-blog/researchers-embracing-visual-tools-contribution-matrix-give-fair-credit-authors-scientific-papers}}}
+{\setlength{\extrarowheight}{2pt}
+\begin{tabular}{+l^c^c^c^c^c^c}
+\toprule\tabhead
+ & QL & MN & BN & SP & JS & CS  \\\otoprule
+Conceptualization 
+    & \low 
+    & \low 
+    & \medium
+    & \\
+Data Curation
+    & \na{6}  \\
+Formal Analysis
+    & \sole
+    & \none
+    & \none \\
+Funding Acquisition
+    & \na{6}  \\
+Investigation
+    & \sole
+    & 
+    & \\
+Methodology
+    & 
+    & \medium
+    & \medium\\
+Project Administration
+    & 
+    & \sole
+    & \\
+Resources
+    & \sole
+    & 
+    & \\
+Software 
+    & \sole
+    & 
+    & \\
+Supervision
+    & 
+    & 
+    & \sole\\
+Validation
+    & \sole
+    & 
+    & \\
+Visuazlization
+    & 
+    & \high
+    & \low\\
+Writing - Original Draft
+    & \sole
+    & 
+    & \\
+Writing - Review and Editing
+    & \low
+    & \low
+    & \medium \\\bottomrule
+\end{tabular}}
+
+\subsubsection*{Legend}
+Contributions are categorized into low medium and substantial.\footnote{For scientific work, measuring contributions exactly is impossible, therefore a broad categorization scheme is used.} The final assessment is based on self-assessment and discussion among authors. Some CRediT categories might not apply to each paper (e.g., if no software is produced or no funding was acquired), this is indicated with ---~n.a.~---. Some papers require a lot of work in one category, and minor work in another. Thus, multiple authors can contribute substantially to one aspect, and rows visually not necessarily add up to the same value.
+Complete list of symbols:
+
+% \begin{table}[h]
+% \centering
+% \begin{tabular}{cl}
+%  \low       & small contribution to this aspect\\
+%  \medium    & medium contribution to this aspect\\
+%  \high      & substantial contribution to this aspect\\
+%  \sole      & solely contributing to this aspect \\
+% \end{tabular}
+% \end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{clcl}
+ \na{1}        & not applicable  &
+ \low       & small contribution to this aspect\\
+ \none      & no contribution to this aspect &
+ \medium    & medium contribution to this aspect\\
+ \sole      & only author contributing to this aspect&
+ \high      & substantial contribution to this aspect\\
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Additional Comments}
+
+\fbox{
+\begin{minipage}{\textwidth}
+~
+\vspace{4cm}
+\end{minipage}
+}
+
+\subsection*{Signatures}
+I hereby confirm that I contributed to this paper as outlined above.
+
+\begin{small}
+\vspace{1cm}
+\noindent\begin{tabular}{ll}
+\makebox[2.7in]{\hrulefill} & \makebox[2.7in]{\hrulefill}\\
+\texttt{Phuong Quynh Le / } Place, Date  
+& \texttt{Meike Nauta/ } Place, Date  
+\\[3ex]% adds space between the two sets of signatures
+\makebox[2.7in]{\hrulefill} & \makebox[2.7in]{\hrulefill}\\
+\texttt{Van Bach Nguyen / } Place, Date  
+& \texttt{Shreyasi Pathak / } Place, Date  
+\\[3ex]% adds space between the two sets of signatures
+\makebox[2.7in]{\hrulefill} & \makebox[2.7in]{\hrulefill}\\
+\texttt{Jörg Schlötterer / } Place, Date  
+& \texttt{Christin Seifert / } Place, Date  
+\end{tabular}    
+\end{small}
+
+
+
+\end{document}
